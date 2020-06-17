@@ -13,7 +13,9 @@ export default class App extends React.Component {
           <HeaderTitle>STAMPY CLOUD</HeaderTitle>
         </Header> 
         <Card>
-          <ListTitle>New to Do</ListTitle>
+          <AddToDo>
+            <ListTitle placeholder="New To Do"></ListTitle>
+          </AddToDo>
         </Card>
       </Container>
     );
@@ -42,16 +44,22 @@ const HeaderTitle = styled.Text`
   text-align: center;
 `;
 
-const ListTitle = styled.Text`
-  font-size: 20px;
-  text-align: center;
+const AddToDo = styled.View`
+  padding: 25px;
+  border-bottom-width: 1px;
+  border-bottom-color: #a6a6a6;
+`;
+
+const ListTitle = styled.TextInput`
+  padding-left: 10px;
+  font-size: 25px;
+  color: #a6a6a6;
 `;
 
 const Card = styled.View`
-  flex: 3;
+  flex: 4;
   width: ${width-20}px;
-  padding: 30px;
-  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px -2px 3px rgba(0, 0, 0, 0.2);
   background-color: #D4F3EF;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
